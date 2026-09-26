@@ -1,0 +1,15 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - build/**
+    - android/**
+    - web/**
+
+formatter:
+  page_width: 240
+
+linter:
+  rules:
+    directives_ordering: true
+    slash_for_doc_comments: false
