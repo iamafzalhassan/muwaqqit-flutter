@@ -21,9 +21,9 @@ class MainPanelsRow extends StatelessWidget {
         children: [
           Expanded(
             child: TimeDisplayPanel(
-              isClockwise: true,
               color: AppPalette.panelGrey,
               dotColor: AppPalette.dotActiveGreen,
+              isClockwise: true,
               labelLetterSpacing: 2,
               labelText: 'TIME',
               primary: TimeFormat.pad(now.hour),
@@ -33,9 +33,9 @@ class MainPanelsRow extends StatelessWidget {
           ),
           Expanded(
             child: TimeDisplayPanel(
-              isClockwise: false,
               color: AppPalette.panelYellow,
               dotColor: AppPalette.dotActiveRed,
+              isClockwise: false,
               labelText: countdownLabel,
               primary: TimeFormat.pad(remaining.inHours),
               secondary: TimeFormat.pad(remaining.inMinutes.remainder(60)),

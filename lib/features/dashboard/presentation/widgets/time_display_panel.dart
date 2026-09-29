@@ -74,7 +74,7 @@ class TimeDisplayPanel extends StatelessWidget {
                 children: [
                   _number(primary, diameter / 2),
                   SizedBox(height: gap),
-                  SecondsRing(activeColor: dotColor, activeSeconds: secondsValue, isClockwise: isClockwise, diameter: diameter, child: _number(secondary, diameter / 2)),
+                  SecondsRing(activeColor: dotColor, activeSeconds: secondsValue, diameter: diameter, isClockwise: isClockwise, child: _number(secondary, diameter / 2)),
                 ],
               );
             },

@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:muwaqqit/core/config/app_config.dart';
 import 'package:muwaqqit/core/utils/time_format.dart';
 import 'package:muwaqqit/features/dashboard/data/services/location_service.dart';
 import 'package:muwaqqit/features/dashboard/data/services/prayer_time_service.dart';
@@ -51,7 +52,15 @@ class DashboardRepositoryImpl implements DashboardRepository {
     }
     final prayers = withActive(_cachedPrayers!, now);
     final next = nextEvent(prayers, now, _cachedNextFajr!);
-    return DashboardSnapshot(gregorianDate: TimeFormat.gregorian(now), hijriDate: '05 RABI AL AKHIR 1447', masjidName: 'MUHIYYADDEEN MASJID', nextLabel: next.label, prayerTimes: prayers, nextPrayerTime: next.time, now: now);
+    return DashboardSnapshot(
+      gregorianDate: TimeFormat.gregorian(now),
+      hijriDate: TimeFormat.hijri(now, dayOffset: AppConfig.hijriDayOffset),
+      masjidName: AppConfig.masjidName,
+      nextLabel: next.label,
+      nextPrayerTime: next.time,
+      now: now,
+      prayerTimes: prayers,
+    );
   }
 
   @override

@@ -1,12 +1,12 @@
 {
-    "name": "muwaqqit",
+    "name": "Muwaqqit",
     "short_name": "muwaqqit",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
-    "orientation": "portrait-primary",
+    "description": "Offline prayer-times board for masjid displays, with live Azan and Iqamah countdowns.",
+    "orientation": "landscape",
     "prefer_related_applications": false,
     "icons": [
         {
